@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
 
-    <title>Login | Mesa de Partes</title>
+    <title>Recuperar Contraseña | Mesa de Partes</title>
 
     <meta name="description" content="Codebase - Bootstrap 4 Admin Template &amp; UI Framework created by pixelcave and published on Themeforest">
     <meta name="author" content="pixelcave">
@@ -20,10 +20,10 @@
 
     <!-- Icons -->
     <!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
-    <link rel="shortcut icon" href="public/assets/img/favicons/favicon.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="public/assets/img/favicons/favicon-192x192.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="public/assets/img/favicons/apple-touch-icon-180x180.png">
-    <link rel="stylesheet" id="css-main" href="public/assets/css/codebase.css">
+    <link rel="shortcut icon" href="../public/assets/img/favicons/favicon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../public/assets/img/favicons/favicon-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../public/assets/img/favicons/apple-touch-icon-180x180.png">
+    <link rel="stylesheet" id="css-main" href="../public/assets/css/codebase.css">
 </head>
 
 <body>
@@ -31,7 +31,7 @@
         <!-- Main Container -->
         <main id="main-container">
             <!-- Page Content -->
-            <div class="bg-image" style="background-image: url('public/assets/img/photos/photo34@2x.jpg');">
+            <div class="bg-image" style="background-image: url('../public/assets/img/photos/photo34@2x.jpg');">
                 <div class="row mx-0 bg-black-op">
                     <div class="hero-static col-md-6 col-xl-8 d-none d-md-flex align-items-md-end">
                         <div class="p-30 invisible" data-toggle="appear">
@@ -52,7 +52,7 @@
                                     <span class="font-size-xl text-primary-dark">Mesa de </span><span class="font-size-xl">Partes</span>
                                 </a>
                                 <h1 class="h3 font-w700 mt-30 mb-10">Bienvenidos a Mesa de Partes</h1>
-                                <h2 class="h5 font-w400 text-muted mb-0">Inicio de sesión</h2>
+                                <h2 class="h5 font-w400 text-muted mb-0">Recuperar Contraseña</h2>
                             </div>
                             <!-- END Header -->
 
@@ -66,33 +66,13 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="form-group row">
-                                    <div class="col-12">
-                                        <div class="form-material floating">
-                                            <input type="password" class="form-control" id="login-password" name="login-password">
-                                            <label for="login-password">Contraseña</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <div class="col-12">
-                                        <label class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="login-remember-me" name="login-remember-me">
-                                            <span class="custom-control-indicator"></span>
-                                            <span class="custom-control-description">Recuerdame</span>
-                                        </label>
-                                    </div>
-                                </div>
                                 <div class="form-group">
                                     <button type="submit" class="btn btn-sm btn-hero btn-alt-primary">
-                                        <i class="si si-login mr-10"></i> Acceder
+                                        <i class="si si-login mr-10"></i> Recuperar
                                     </button>
                                     <div class="mt-30">
-                                        <a class="link-effect text-muted mr-10 mb-5 d-inline-block" href="Registrarse/">
-                                            <i class="fa fa-plus mr-5"></i> Crear Cuenta
-                                        </a>
-                                        <a class="link-effect text-muted mr-10 mb-5 d-inline-block" href="RecuperarContrasena/">
-                                            <i class="fa fa-warning mr-5"></i> Olvide mi Contraseña
+                                        <a class="link-effect text-muted mr-10 mb-5 d-inline-block" href="../">
+                                            <i class="fa fa-plus mr-5"></i> Login
                                         </a>
                                     </div>
                                 </div>
@@ -109,21 +89,21 @@
     <!-- END Page Container -->
 
     <!-- Codebase Core JS -->
-    <script src="public/assets/js/core/jquery.min.js"></script>
-    <script src="public/assets/js/core/popper.min.js"></script>
-    <script src="public/assets/js/core/bootstrap.min.js"></script>
-    <script src="public/assets/js/core/jquery.slimscroll.min.js"></script>
-    <script src="public/assets/js/core/jquery.scrollLock.min.js"></script>
-    <script src="public/assets/js/core/jquery.appear.min.js"></script>
-    <script src="public/assets/js/core/jquery.countTo.min.js"></script>
-    <script src="public/assets/js/core/js.cookie.min.js"></script>
-    <script src="public/assets/js/codebase.js"></script>
+    <script src="../public/assets/js/core/jquery.min.js"></script>
+    <script src="../public/assets/js/core/popper.min.js"></script>
+    <script src="../public/assets/js/core/bootstrap.min.js"></script>
+    <script src="../public/assets/js/core/jquery.slimscroll.min.js"></script>
+    <script src="../public/assets/js/core/jquery.scrollLock.min.js"></script>
+    <script src="../public/assets/js/core/jquery.appear.min.js"></script>
+    <script src="../public/assets/js/core/jquery.countTo.min.js"></script>
+    <script src="../public/assets/js/core/js.cookie.min.js"></script>
+    <script src="../public/assets/js/codebase.js"></script>
 
     <!-- Page JS Plugins -->
-    <script src="public/assets/js/plugins/jquery-validation/jquery.validate.min.js"></script>
+    <script src="../public/assets/js/plugins/jquery-validation/jquery.validate.min.js"></script>
 
     <!-- Page JS Code -->
-    <script src="public/assets/js/pages/op_auth_signin.js"></script>
+    <script src="../public/assets/js/pages/op_auth_signin.js"></script>
 </body>
 
 </html>
