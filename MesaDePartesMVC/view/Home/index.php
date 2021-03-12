@@ -1,3 +1,8 @@
+<?php
+require_once("../../config/conexion.php");
+if(isset($_SESSION["UsuarioID"])){
+?>
+
 <!doctype html>
 <html lang="en" class="no-focus">
 
@@ -27,7 +32,7 @@
                             <a class="img-link mr-5" href="be_pages_generic_profile.html">
                                 <img class="img-avatar img-avatar32" src="../../public/assets/img/avatars/avatar15.jpg" alt="">
                             </a>
-                            <a class="align-middle link-effect text-primary-dark font-w600" href="be_pages_generic_profile.html">John Smith</a>
+                            <a class="align-middle link-effect text-primary-dark font-w600" href="be_pages_generic_profile.html"><?php echo $_SESSION["NombreUsuario"]." ".$_SESSION["ApellidoUsuario"]?></a>
                         </div>
                         <!-- END User Info -->
                     </div>
@@ -64,8 +69,6 @@
         <main id="main-container">
             <!-- Page Content -->
             <div class="content">
-                <h2 class="content-heading">Blank <small>Get Started</small></h2>
-                <p>Create your own awesome project!</p>
             </div>
             <!-- END Page Content -->
         </main>
@@ -78,3 +81,8 @@
 </body>
 
 </html>
+<?php
+  } else {
+    header("Location:".Conectar::ruta()."index.php");
+  }
+?>
