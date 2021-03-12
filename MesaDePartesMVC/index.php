@@ -1,3 +1,12 @@
+<?php
+require_once("config/conexion.php");
+if (isset($_POST["enviar"]) and $_POST["enviar"] == "si") {
+    require_once("models/Usuarios.php");
+    $usuarios = new Usuarios();
+    $usuarios->login();
+}
+?>
+
 <html lang="en" class="no-focus">
 
 <head>
@@ -56,12 +65,46 @@
                             </div>
                             <!-- END Header -->
 
+                            <?php
+                            if (isset($_GET["m"])) {
+                                switch ($_GET["m"]) {
+                                    case "1";
+                            ?>
+                                        <div class="alert alert-danger" role="alert">
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                            <div class="d-flex align-items-center justify-content-start">
+                                                <i class="icon ion-ios-checkmark alert-icon tx-32 mg-t-5 mg-xs-t-0"></i>
+                                                <span> El Usuario y/o Contraseña son incorrectos. </span>
+                                            </div>
+                                        </div>
+                                    <?php
+                                        break;
+
+                                    case "2";
+                                    ?>
+                                        <div class="alert alert-danger" role="alert">
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                            <div class="d-flex align-items-center justify-content-start">
+                                                <i class="icon ion-ios-checkmark alert-icon tx-32 mg-t-5 mg-xs-t-0"></i>
+                                                <span> Los campos estan vacios.</span>
+                                            </div>
+                                        </div>
+                            <?php
+                                        break;
+                                }
+                            }
+                            ?>
+
                             <!-- Sign In Form -->
-                            <form class="js-validation-signin px-30" action="be_pages_auth_all.html" method="post">
+                            <form class="js-validation-signin px-30" action="" method="post" id="loginnum1">
                                 <div class="form-group row">
                                     <div class="col-12">
                                         <div class="form-material floating">
-                                            <input type="text" class="form-control" id="login-username" name="login-username">
+                                            <input type="email" class="form-control" id="correoElectronico" name="correoElectronico">
                                             <label for="login-username">Correo Electrónico</label>
                                         </div>
                                     </div>
@@ -69,7 +112,7 @@
                                 <div class="form-group row">
                                     <div class="col-12">
                                         <div class="form-material floating">
-                                            <input type="password" class="form-control" id="login-password" name="login-password">
+                                            <input type="password" class="form-control" id="password" name="password">
                                             <label for="login-password">Contraseña</label>
                                         </div>
                                     </div>
@@ -84,9 +127,10 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <a class="btn btn-sm btn-hero btn-alt-primary" href="view/Home/">
-                                        <i class="si si-login mr-10"></i> Acceder
-                                    </a>
+                                    <input type="hidden" name="enviar" class="form-control" value="si">
+                                    <button type="submit" class="btn btn-sm btn-hero btn-alt-primary">
+                                        <i class="si si-login mr-10"></i> Iniciar Sesión
+                                    </button>
                                     <div class="mt-30">
                                         <a class="link-effect text-muted mr-10 mb-5 d-inline-block" href="Registrarse/">
                                             <i class="fa fa-plus mr-5"></i> Crear Cuenta
